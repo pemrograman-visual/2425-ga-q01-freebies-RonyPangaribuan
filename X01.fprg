@@ -2,21 +2,22 @@
 <flowgorithm fileversion="4.2">
     <attributes>
         <attribute name="name" value="X01"/>
-        <attribute name="authors" value="ASUS"/>
+        <attribute name="authors" value="ACER"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-10-09 04:25:33 PM"/>
-        <attribute name="created" value="QVNVUztST05ZOzIwMjQtMTAtMDk7MDM6MDk6MjAgUE07MTkyMA=="/>
-        <attribute name="edited" value="QVNVUztST05ZOzIwMjQtMTAtMDk7MDQ6MjU6MzMgUE07OTsyMDM5"/>
+        <attribute name="saved" value="2024-10-09 04:37:15 PM"/>
+        <attribute name="created" value="QUNFUjtNWUhTWkU7MjAyNC0xMC0wOTswMzoxMjo1MCBQTTsyMDM2"/>
+        <attribute name="edited" value="QUNFUjtNWUhTWkU7MjAyNC0xMC0wOTswNDowNDowMiBQTTsyOzIxNDQ="/>
+        <attribute name="edited" value="QVNVUztST05ZOzIwMjQtMTAtMDk7MDQ6Mzc6MTUgUE07MTsyMDM0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="BukuMurah, HargaBuku, total" type="Real" array="False" size=""/>
+            <declare name="Bukumurah, HargaBuku, Total" type="Real" array="False" size=""/>
             <assign variable="total" expression="0"/>
             <assign variable="BukuMurah" expression="9999"/>
-            <do expression="HargaBuku!=0">
-                <input variable="HargaBuku"/>
-                <if expression="HargaBuku=0">
+            <input variable="HargaBuku"/>
+            <while expression="HargaBuku != 0">
+                <if expression="HargaBuku = 0">
                     <then/>
                     <else>
                         <if expression="HargaBuku&lt;BukuMurah">
@@ -27,11 +28,12 @@
                                 <assign variable="HargaBuku" expression="HargaBuku"/>
                             </else>
                         </if>
-                        <assign variable="Total" expression="Total+HargaBuku"/>
+                        <assign variable="Total" expression="Total +HargaBuku"/>
                     </else>
                 </if>
-            </do>
-            <if expression="Total&gt;0">
+                <input variable="HargaBuku"/>
+            </while>
+            <if expression="Total &gt;= 100">
                 <then>
                     <assign variable="Total" expression="Total-BukuMurah"/>
                 </then>
@@ -39,7 +41,7 @@
                     <assign variable="Total" expression="Total"/>
                 </else>
             </if>
-            <output expression="Tofixed(Total,2)" newline="True"/>
+            <output expression="tofixed(Total,2)" newline="True"/>
         </body>
     </function>
 </flowgorithm>
