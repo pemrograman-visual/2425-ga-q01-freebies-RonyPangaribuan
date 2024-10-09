@@ -4,10 +4,10 @@
         <attribute name="name" value="X01"/>
         <attribute name="authors" value="ACER"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2024-10-09 04:39:35 PM"/>
+        <attribute name="saved" value="2024-10-09 04:43:33 PM"/>
         <attribute name="created" value="QUNFUjtNWUhTWkU7MjAyNC0xMC0wOTswMzoxMjo1MCBQTTsyMDM2"/>
         <attribute name="edited" value="QUNFUjtNWUhTWkU7MjAyNC0xMC0wOTswNDowNDowMiBQTTsyOzIxNDQ="/>
-        <attribute name="edited" value="QVNVUztST05ZOzIwMjQtMTAtMDk7MDQ6Mzk6MzUgUE07MjsyMDM5"/>
+        <attribute name="edited" value="QVNVUztST05ZOzIwMjQtMTAtMDk7MDQ6NDM6MzMgUE07MzsyMDMz"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -22,7 +22,7 @@
                     <else>
                         <if expression="HargaBuku&lt;BukuMurah">
                             <then>
-                                <assign variable="BukuMurah" expression="HargaBuku"/>
+                                <assign variable="HargaBuku" expression="BukuMurah"/>
                             </then>
                             <else>
                                 <assign variable="HargaBuku" expression="HargaBuku"/>
