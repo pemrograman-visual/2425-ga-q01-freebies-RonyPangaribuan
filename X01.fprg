@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="X01"/>
+        <attribute name="authors" value="ASUS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-10-09 04:04:14 PM"/>
+        <attribute name="created" value="QVNVUztST05ZOzIwMjQtMTAtMDk7MDM6MDk6MjAgUE07MTkyMA=="/>
+        <attribute name="edited" value="QVNVUztST05ZOzIwMjQtMTAtMDk7MDQ6MDQ6MTQgUE07NjsyMDMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="BukuMurah, HargaBuku, total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="0"/>
+            <assign variable="BukuMurah" expression="9999"/>
+            <do expression="HargaBuku!=0">
+                <input variable="HargaBuku"/>
+                <if expression="HargaBuku=0">
+                    <then/>
+                    <else>
+                        <if expression="HargaBuku&lt;BukuMurah">
+                            <then>
+                                <assign variable="BukuMurah" expression="HargaBuku"/>
+                            </then>
+                            <else>
+                                <assign variable="HargaBuku" expression="HargaBuku"/>
+                            </else>
+                        </if>
+                        <assign variable="Total" expression="Total+HargaBuku"/>
+                    </else>
+                </if>
+            </do>
+            <if expression="Total&gt;0">
+                <then>
+                    <assign variable="Total" expression="Total-BukuMurah"/>
+                </then>
+                <else>
+                    <assign variable="Total" expression="Total"/>
+                </else>
+            </if>
+            <output expression="Tofixed(Total,2)" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
