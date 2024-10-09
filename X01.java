@@ -17,7 +17,7 @@ public class X01 {
             if (hargaBuku == 0) {
             } else {
                 if (hargaBuku < bukumurah) {
-                    hargaBuku = bukumurah;
+                    bukumurah = hargaBuku;
                 } else {
                     hargaBuku = hargaBuku;
                 }
